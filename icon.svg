@@ -1,0 +1,53 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with subtle gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#326CE5;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#326CE5;stop-opacity:0.1"/>
+    </linearGradient>
+    <linearGradient id="k-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E40FF"/>
+      <stop offset="100%" style="stop-color:#A0E1FF"/>
+    </linearGradient>
+    <!-- Kubernetes wheel pattern -->
+    <pattern id="k8s-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0 20 L40 20 M20 0 L20 40" stroke="#326CE5" stroke-width="1" opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Base circle with gradient -->
+  <circle cx="100" cy="100" r="90" fill="url(#bg-gradient)"/>
+  <circle cx="100" cy="100" r="90" fill="url(#k8s-pattern)"/>
+
+  <!-- Main kubernetes helm symbol, modernized -->
+  <g transform="translate(100 100)">
+    <!-- Central octagon -->
+    <path d="M0,-60 L42,-42 L60,0 L42,42 L0,60 L-42,42 L-60,0 L-42,-42 Z"
+          fill="none"
+          stroke="#326CE5"
+          stroke-width="3"
+          transform="rotate(22.5)"/>
+
+    <!-- K symbol -->
+    <g transform="translate(20 00)">
+      <path d="M-40,-30 L-40,30 M-40,0 L20,-40 M-40,0 L20,40"
+          stroke="url(#k-gradient)"
+          stroke-width="16"
+          stroke-linecap="round"
+          fill="none"
+          filter="url(#glow)"/>
+    </g>
+  </g>
+
+  <!-- Orbiting elements suggesting both atomic structure and learning progression -->
+  <g transform="translate(100 100)">
+    <circle cx="0" cy="-75" r="8" fill="#326CE5" opacity="0.8"/>
+    <circle cx="65" cy="37.5" r="8" fill="#326CE5" opacity="0.6"/>
+    <circle cx="-65" cy="37.5" r="8" fill="#326CE5" opacity="0.4"/>
+
+    <!-- Connecting lines -->
+    <path d="M0,-75 A75,75 0 0,1 65,37.5" fill="none" stroke="#326CE5" stroke-width="2" opacity="0.3"/>
+    <path d="M65,37.5 A75,75 0 0,1 -65,37.5" fill="none" stroke="#326CE5" stroke-width="2" opacity="0.3"/>
+    <path d="M-65,37.5 A75,75 0 0,1 0,-75" fill="none" stroke="#326CE5" stroke-width="2" opacity="0.3"/>
+  </g>
+</svg>
